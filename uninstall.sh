@@ -6,7 +6,7 @@ set -e
 function main() 
 {
     cd $HOME
-    rm -fR  .devopscc
+    rm -fR .devopscc
 }
 
 main
