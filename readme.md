@@ -18,3 +18,5 @@ This tool help developer with common utility usage sush as git and docker enviro
 # Usage
 
 - Auto-commit: `c <branch-name>` eg. `c feature-customers`
+- New Feature: `f <feature-name>` eg. `f feature-customers`
+- Move Branch: `m <branch-name>` eg. `m sviluppo`

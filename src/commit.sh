@@ -17,6 +17,7 @@ function main()
         exit 1
     fi
 
+    git pull origin $1
     git status -vu
     echo "Stage all and commit? (Y/n)"
     read answer
