@@ -27,7 +27,9 @@ function main()
     rm -rf .git
     cp src/* ./../
     cd ..
+    chmod +x ./*
     rm -Rf devhelper
+
 
 
     # Check if settings already applied
