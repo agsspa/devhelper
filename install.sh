@@ -4,13 +4,15 @@ set -e
 
 
 SETTINGS='
-export DISPLAY=:0
-alias h="vim /mnt/c/Windows/System32/drivers/etc/hosts"
-alias c="~/.devopscc/commit.sh"
-alias b="~/.devopscc/bootstrap.sh"
-alias u="~/.devopscc/up.sh"
-alias s="~/.devopscc/stop.sh"
-alias d= "~/.devopscc/down.sh
+\n
+# devopscc helpers\n
+export DISPLAY=:0 \n
+alias h="vim /mnt/c/Windows/System32/drivers/etc/hosts"\n
+alias c="~/.devopscc/commit.sh"\n
+alias b="~/.devopscc/bootstrap.sh"\n
+alias u="~/.devopscc/up.sh"\n
+alias s="~/.devopscc/stop.sh"\n
+alias d="~/.devopscc/down.sh"\n
 '
 
 
@@ -23,7 +25,9 @@ function main()
     git clone https://github.com/agsspa/devhelper.git
     cd devhelper
     rm -rf .git
-    cp src/* ./
+    cp src/* ./../
+    cd ..
+    rm -Rf devhelper
 
 
     # Check if settings already applied
