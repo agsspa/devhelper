@@ -21,8 +21,16 @@ SETTINGS7="alias d='~/.devopscc/down.sh'"
 # Main
 function main() 
 {
-    echo -e "${BLUE}Installing...${NC}"
-    echo #
+    
+    # Check if settings already applied for verbose message
+    if [ -e $HOME/.devopscc/.check ]; then
+        echo -e "${BLUE}Updating...${NC}"
+        echo #
+    else 
+        echo -e "${BLUE}Installing...${NC}"
+        echo #
+    fi
+
     cd $HOME
     mkdir -p .devopscc
     cd .devopscc
