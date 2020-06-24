@@ -7,7 +7,8 @@ set -e
 function main()
 {
     if [ ! -e .git ]; then
-        echo "Impossibile procedere, questo non e' un repo git o ti trovi in una sottodirectory"
+        echo "Impossibile procedere! Questo non e' un repo git o ti trovi in una sottodirectory"
+        echo "Abort"
         exit 1
     fi
 
