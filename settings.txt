@@ -1,0 +1,10 @@
+# DevOpsCC helpers
+export DISPLAY=:0
+alias h='vim /mnt/c/Windows/System32/drivers/etc/hosts'
+alias c='~/.devopscc/commit.sh'
+alias f='~/.devopscc/feature.sh'
+alias m='~/.devopscc/move.sh'
+alias b='~/.devopscc/bootstrap.sh'
+alias u='~/.devopscc/up.sh'
+alias s='~/.devopscc/stop.sh'
+alias d='~/.devopscc/down.sh'

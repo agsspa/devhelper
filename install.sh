@@ -8,16 +8,6 @@ RED='\033[0;31m'
 NC='\033[0m' #No Color
 
 
-SETTINGS0="# DevOpsCC helpers"
-SETTINGS1="export DISPLAY=:0"
-SETTINGS2="alias h='vim /mnt/c/Windows/System32/drivers/etc/hosts'"
-SETTINGS3="alias c='~/.devopscc/commit.sh'"
-SETTINGS4="alias b='~/.devopscc/bootstrap.sh'"
-SETTINGS5="alias u='~/.devopscc/up.sh'"
-SETTINGS6="alias s='~/.devopscc/stop.sh'"
-SETTINGS7="alias d='~/.devopscc/down.sh'"
-
-
 # Main
 function main() 
 {
@@ -38,6 +28,7 @@ function main()
     cd devhelper
     rm -rf .git
     cp src/* ./../
+    cp settings.txt ../
     cd ..
     chmod +x ./*
     rm -Rf devhelper
@@ -52,28 +43,16 @@ function main()
 
 
     if [ "$SHELL" == "/bin/bash" ]; then
-        echo $SETTINGS0 >> $HOME/.bashrc
-        echo $SETTINGS1 >> $HOME/.bashrc
-        echo $SETTINGS2 >> $HOME/.bashrc
-        echo $SETTINGS3 >> $HOME/.bashrc
-        echo $SETTINGS4 >> $HOME/.bashrc
-        echo $SETTINGS5 >> $HOME/.bashrc
-        echo $SETTINGS6 >> $HOME/.bashrc
-        echo $SETTINGS7 >> $HOME/.bashrc
+        cat $HOME/.devopscc/settings.txt >> $HOME/.bashrc
+        rm $HOME/.devopscc/settings.txt
         touch $HOME/.devopscc/.check
         #source $HOME/.bashrc
     fi
 
 
     if [ "$SHELL" == "/bin/zsh" ]; then
-        echo $SETTINGS0 >> $HOME/.zshrc
-        echo $SETTINGS1 >> $HOME/.zshrc
-        echo $SETTINGS2 >> $HOME/.zshrc
-        echo $SETTINGS3 >> $HOME/.zshrc
-        echo $SETTINGS4 >> $HOME/.zshrc
-        echo $SETTINGS5 >> $HOME/.zshrc
-        echo $SETTINGS6 >> $HOME/.zshrc
-        echo $SETTINGS7 >> $HOME/.zshrc
+        cat $HOME/.devopscc/settings.txt >> $HOME/.zshrc
+        rm $HOME/.devopscc/settings.txt
         touch $HOME/.devopscc/.check
         #source $HOME/.zshrc
     fi
