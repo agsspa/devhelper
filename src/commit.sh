@@ -18,7 +18,7 @@ function main()
     if [ "$answer" == "y" ] || [ "$answer" == "Y" ]; then
         git add .
         git commit
-        git push -u origin $1
+        git push origin $1
     fi
 
 }
